@@ -198,7 +198,7 @@ const useStyles = makeStyles(theme => ({
         name: values.name || undefined,
         email: values.email || undefined,
         password: values.password || undefined,
-        seller: values.seller || undefined
+        seller: values.seller || false
       }
       update({
         userId: jwt.user._id,
