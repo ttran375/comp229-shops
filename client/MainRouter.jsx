@@ -7,7 +7,9 @@ import Signin from './lib/Signin.jsx'
 import Profile from './user/Profile.jsx'
 import PrivateRoute from './lib/PrivateRoute.jsx'
 import EditProfile from './user/EditProfile.jsx'
-
+import MyShops from './shop/MyShops'
+import NewShop from './shop/NewShop'
+import EditShop from './shop/EditShop'
 import Menu from './core/Menu' 
 function MainRouter() {
 return (
@@ -29,6 +31,9 @@ return (
  }
  />
  <Route path="/user/:userId" element={<Profile />} />
+ <Route path="/seller/shops" element={ <PrivateRoute><MyShops /></PrivateRoute>}/>
+ <Route path="/seller/shop/new" element={<PrivateRoute><NewShop /></PrivateRoute>}/>
+ <Route path="/seller/shop/edit/:shopId" element={<PrivateRoute><EditShop /></PrivateRoute>}/>
 </Routes>
 </div>
  );
